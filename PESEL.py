@@ -5,10 +5,10 @@ import input_exceptions
 
 birth_year=input_exceptions.birth_year_input('Input your birthdate - Year (1800 - 2299): ')
 print(birth_year)
-if input_exceptions.CheckLeap(True):
-    print("True")
-else:
-    print("False")
+# if input_exceptions.CheckLeap(True):
+#     print("True")
+# else:
+#     print("False")
 birth_month=input_exceptions.birth_month_input('Input your birthdate - Month (1 - 12): ')
 
 

@@ -4,10 +4,11 @@ def CheckLeap(Year):
      (Year % 100 != 0) and
      (Year % 4 == 0)):
     print("Given Year is a leap Year")
-
+    return ("True")
   # Else it is not a leap year
   else:
     print ("Given Year is not a leap Year")
+    return ("False")
 # Taking an input year from user
 
 def birth_year_input(message):
@@ -40,7 +41,14 @@ def birth_day_input(message):
     while True:
         try:
             birth_day = int(input(message))
-            assert 1 <= birth_day <= 31
+            if birth_day ==2:
+                if CheckLeap("True"):
+                    assert 1<=birth_day<=29
+                else:
+                    assert 1<=birth_day<=28
+            else:
+                assert 1 <= birth_day <= 31
+
             return birth_day
         except ValueError:
             print("Not a valid number, try again")

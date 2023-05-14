@@ -9,4 +9,6 @@ print(birth_year)
 birth_month=input_exceptions.birth_month_input('Input your birthdate - Month (1 - 12): ')
 birth_day=input_exceptions.birth_day_input('Input your birthdate - Day (1 - 31): ')
 gender = input_exceptions.gender_input('Male/Female - M/F: ')
-# PESEL
+# PESEL RRMMDDLLLLK
+# #Losowe cyfry - L
+# Cyfra kontrolna - K

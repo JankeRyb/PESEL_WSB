@@ -3,11 +3,11 @@ def CheckLeap(Year):
   if((Year % 400 == 0) or
      (Year % 100 != 0) and
      (Year % 4 == 0)):
-    print("Given Year is a leap Year")
+    #print("Given Year is a leap Year")
     return ("True")
   # Else it is not a leap year
   else:
-    print ("Given Year is not a leap Year")
+    #print ("Given Year is not a leap Year")
     return ("False")
 # Taking an input year from user
 
@@ -37,18 +37,42 @@ def birth_month_input(message):
 #czy robimy test na rok przestepny i luty 28/29 dni???
 
 
-def birth_day_input(message):
+def birth_day_input_28(message):
     while True:
         try:
             birth_day = int(input(message))
-            if birth_day ==2:
-                if CheckLeap("True"):
-                    assert 1<=birth_day<=29
-                else:
-                    assert 1<=birth_day<=28
-            else:
-                assert 1 <= birth_day <= 31
+            assert 1 <= birth_day <= 28
+            return birth_day
+        except ValueError:
+            print("Not a valid number, try again")
+        except AssertionError:
+            print('Day MUST BE between 1 and 28')
 
+def birth_day_input_29(message):
+    while True:
+        try:
+            birth_day = int(input(message))
+            assert 1 <= birth_day <= 29
+            return birth_day
+        except ValueError:
+            print("Not a valid number, try again")
+        except AssertionError:
+            print('Day MUST BE between 1 and 29')
+def birth_day_input_30(message):
+    while True:
+        try:
+            birth_day = int(input(message))
+            assert 1 <= birth_day <= 30
+            return birth_day
+        except ValueError:
+            print("Not a valid number, try again")
+        except AssertionError:
+            print('Day MUST BE between 1 and 30')
+def birth_day_input_31(message):
+    while True:
+        try:
+            birth_day = int(input(message))
+            assert 1 <= birth_day <= 31
             return birth_day
         except ValueError:
             print("Not a valid number, try again")

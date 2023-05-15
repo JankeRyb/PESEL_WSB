@@ -4,7 +4,7 @@ import input_exceptions
 
 
 birth_year=input_exceptions.birth_year_input('Input your birthdate - Year (1800 - 2299): ')
-print(birth_year)
+
 # if input_exceptions.CheckLeap(True):
 #     print("True")
 # else:
@@ -49,14 +49,6 @@ b = int(b)
 
 c = month[0]
 c = int(c)
-if 1899>=birth_year>=1800:
-    c+=8
-elif 2099>=birth_year>=2000:
-    c+=2
-elif 2199>=birth_year>=2100:
-    c+=4
-elif 2299>=birth_year>=2200:
-    c+=6
 
 d = month[1]
 d = int(d)
@@ -87,8 +79,19 @@ if check % 10 == 0:
 else:
     last_digit = 10 - (check % 10)
 
+if 1899>=birth_year>=1800:
+    c+=8
+elif 2099>=birth_year>=2000:
+    c+=2
+elif 2199>=birth_year>=2100:
+    c+=4
+elif 2299>=birth_year>=2200:
+    c+=6
+
 print('%02d' % (birth_year % 100), end='')
-print('%02d' % birth_month, end='')
+#print('%02d' % birth_month, end='')
+print(c, end='')
+print(d, end='')
 print('%02d' % birth_day, end='')
 print(three_random, end='')
 print(j, end='')

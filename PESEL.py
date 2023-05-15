@@ -49,6 +49,14 @@ b = int(b)
 
 c = month[0]
 c = int(c)
+if 1899>=birth_year>=1800:
+    c+=8
+elif 2099>=birth_year>=2000:
+    c+=2
+elif 2199>=birth_year>=2100:
+    c+=4
+elif 2299>=birth_year>=2200:
+    c+=6
 
 d = month[1]
 d = int(d)

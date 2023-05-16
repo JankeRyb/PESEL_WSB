@@ -21,22 +21,18 @@ elif birth_month in (4, 6, 9, 11):
 else:
     birth_day=input_exceptions.birth_day_input_31('Input your birthdate - Day (1 - 31): ')
 
-
 gender = input_exceptions.gender_input('Male/Female - M/F: ')
 
-
 if gender == "M":
-    test_list=[1,3,5,7,9]
-    gender_random = random.sample(test_list,1)
+    test_list = [1, 3, 5, 7, 9]
+    gender_random = random.sample(test_list, 1)
 else:
-    test_list=[0,2,4,6,8]
-    gender_random = random.sample(test_list,1)
-
+    test_list = [0, 2, 4, 6, 8]
+    gender_random = random.sample(test_list, 1)
 
 year = '%02d' % (birth_year % 100)
 month = '%02d' % birth_month
 day = '%02d' % birth_month
-
 
 three_random = random.randint(100,999)
 three_random = str(three_random)
@@ -72,7 +68,6 @@ j = gender_random[0]
 j = int(j)
 
 
-
 check = a + 3 * b + 7 * c + 9 * d + e + 3 * f + 7 * g + 9 * h + i + 3 * j
 if check % 10 == 0:
     last_digit = 0
@@ -88,6 +83,7 @@ elif 2199>=birth_year>=2100:
 elif 2299>=birth_year>=2200:
     c+=6
 
+print('\nYour PESEL is: ', end='')
 print('%02d' % (birth_year % 100), end='')
 #print('%02d' % birth_month, end='')
 print(c, end='')
